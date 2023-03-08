@@ -1,0 +1,11 @@
+[package]
+name = "prover"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+halo2_proofs = { path = "../../halo2/halo2_proofs", default-features = false, features = ["no_floating_points"] }
+shared = { path = "../shared" }
+rand = "0.8.5"

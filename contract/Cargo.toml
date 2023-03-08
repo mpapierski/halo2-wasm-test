@@ -1,0 +1,18 @@
+[package]
+name = "halo2-wasm-test"
+version = "0.1.0"
+authors = ["Michał Papierski <michal@casperlabs.io>"]
+edition = "2018"
+
+[[bin]]
+name = "halo2_wasm_test"
+path = "src/main.rs"
+bench = false
+doctest = false
+test = false
+
+[dependencies]
+casper-contract = { version = "1.4.4", default-features = false, features = ["test-support"] }
+casper-types = "1.5"
+shared = { path = "../shared" }
+halo2_proofs = { path = "../../halo2/halo2_proofs", default-features = false, features = ["no_floating_points"] }
